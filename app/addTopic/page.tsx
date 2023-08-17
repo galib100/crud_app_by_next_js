@@ -8,7 +8,7 @@ const AddTopic =  () => {
     const [description, setDescription] = useState("");
     const router = useRouter();
 // console.log("client side working ")
-    const handleSubmit = async (e)=>{
+    const handleSubmit = async (e:any)=>{
         // console.log("submit clicked!!")
         e.preventDefault();
         if(!title || !description){
