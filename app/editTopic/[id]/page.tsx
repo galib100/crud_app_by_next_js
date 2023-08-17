@@ -2,10 +2,10 @@
 
 import EditTopicForm from '@/components/EditTopicForm'
 import React from 'react'
-
-const getTopicById = async (id) => {
+import {L_URL} from '../../../url'
+const getTopicById = async (id:any) => {
     try {
-      const res = await fetch(`${process.env.L_URL}/api/topics/${id}`, {
+      const res = await fetch(`${L_URL}/api/topics/${id}`, {
         cache: "no-store",
         
       }) 
@@ -17,7 +17,7 @@ const getTopicById = async (id) => {
       console.log(error)
     }
   }
-const editTopic = async({ params }) => {
+const editTopic = async({ params}:any) => {
   const { id } = params;
  const {topic}= await getTopicById(id);
   // console.log(id);

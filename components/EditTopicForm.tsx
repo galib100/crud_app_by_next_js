@@ -2,15 +2,15 @@
 
 import { useRouter } from "@/node_modules/next/navigation";
 import { useState } from "react"
-
-export default function ({ id, title, description }) {
+import {L_URL} from '../url'
+export default function ({ id, title, description }:any) {
     const [newTitle, setNewTitle] = useState(title);
     const [newDescription, setNewDescription] = useState(description);
     const router = useRouter();
-    const handleSubmit = async (e) => {
+    const handleSubmit = async (e:any) => {
         e.preventDefault();
         try {
-            const res = await fetch(`${process.env.L_URL}/api/topics/${id}`, {
+            const res = await fetch(`${L_URL}/api/topics/${id}`, {
                 method: "PUT",
                 headers: {
                     "content-type": "application/json",

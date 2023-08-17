@@ -2,10 +2,10 @@ import Link from '@/node_modules/next/link'
 import React from 'react'
 import RemoveBtn from './RemoveBtn'
 import {HiPencilAlt}  from "react-icons/hi"
-
+import {L_URL} from '../url'
 const getTopics = async ()=>{
     try {
-        const res = await fetch(`${process.env.L_URL}/api/topics`,{
+        const res = await fetch(`${L_URL}/api/topics`,{
             cache:"no-store",
         });
         if(!res.ok){
@@ -21,7 +21,7 @@ const TopicList = async () => {
     const {topics} = await getTopics();
   return (
     <>
-    {topics.map((t)=>(
+    {topics.map((t:any)=>(
    
         <div className='p-4 border border-slate-300 my-3 flex justify-between gap-5 items-start'>
             <div>

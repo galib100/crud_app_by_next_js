@@ -2,7 +2,7 @@
 
 import { useRouter } from '@/node_modules/next/navigation';
 import React, { useState } from 'react'
-
+import {L_URL} from '../../url'
 const AddTopic =  () => {
     const [title, setTitle] = useState("")
     const [description, setDescription] = useState("");
@@ -16,7 +16,7 @@ const AddTopic =  () => {
             return;
         }
         try {
-           const res =  await fetch(`${process.env.L_URL}/api/topics`,{
+           const res =  await fetch(`${L_URL}/api/topics`,{
                 method:"POST",
                 headers:{
                     "Content-type":"application/json",

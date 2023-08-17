@@ -2,12 +2,13 @@
 import { useRouter } from '@/node_modules/next/navigation';
 import React from 'react'
 import {HiOutlineTrash} from "react-icons/hi"
-const RemoveBtn = ({id}) => {
+import {L_URL} from '../url'
+const RemoveBtn = ({id}:any) => {
   const router = useRouter();
   const removeTopic = async()=>{
     const confirmed  = confirm('Are you sure to delete?');
     if(confirmed){
-     const res =  await fetch(`${process.env.L_URL}/api/topics?id=${id}`,{
+     const res =  await fetch(`${L_URL}/api/topics?id=${id}`,{
         method:"DELETE",
       });
       if(res.ok){
