@@ -7,6 +7,7 @@ const getTopics = async ()=>{
     try {
         const res = await fetch(`${L_URL}/api/topics`,{
             cache:"no-store",
+            method:"GET"
         });
         if(!res.ok){
             throw new Error("failed to fetch topics");
@@ -19,8 +20,7 @@ const getTopics = async ()=>{
 
 const TopicList = async () => {
     const {topics} = await getTopics();
-  return (
-    <>
+  return <>
     {topics.map((t:any)=>(
    
         <div className='p-4 border border-slate-300 my-3 flex justify-between gap-5 items-start'>
@@ -41,8 +41,7 @@ const TopicList = async () => {
         </div>
     ))}
     </>
-         
-  )
+
 }
 
 export default TopicList

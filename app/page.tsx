@@ -3,7 +3,8 @@ import TopicList from "@/components/TopicList";
 export default function Home() {
   return (
     <main>
-        <TopicList/>
+      {/* @ts-expect-error Server Component */}
+        <TopicList />
          
     </main>
   )
