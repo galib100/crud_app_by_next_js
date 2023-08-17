@@ -2,13 +2,9 @@ import TopicList from "@/components/TopicList";
 
 export default function Home() {
   return (
-    <main >
+    <main>
         <TopicList/>
-        <TopicList/>
-        <TopicList/>
-        <TopicList/>
-        <TopicList/>
-        <TopicList/>
+         
     </main>
   )
 }

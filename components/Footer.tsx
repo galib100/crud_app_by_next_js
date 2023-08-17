@@ -4,7 +4,7 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-white py-6">
+    <footer className="bg-gray-900 text-white p-6">
       <div className="container mx-auto flex justify-between items-center">
         <div className="text-lg">Semicolon</div>
         <div>Develop By <a href="https://facebook.com/51.galib"> Musanna Galib</a></div>
