@@ -7,7 +7,6 @@ const getTopics = async ()=>{
     try {
         const res = await fetch(`${L_URL}/api/topics`,{
             cache:"no-store",
-            method:"GET"
         });
         if(!res.ok){
             throw new Error("failed to fetch topics");
