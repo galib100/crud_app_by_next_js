@@ -4,6 +4,7 @@ Here i've used the Big boss :fire: NEXT JS 13  :fire:
 
 ```
 git clone https://github.com/galib100/crud_app_by_next_js.git
+npm install 
 
 ```
 First, run the development server:
